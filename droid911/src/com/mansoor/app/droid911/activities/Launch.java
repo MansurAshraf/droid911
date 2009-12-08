@@ -7,6 +7,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import com.google.android.maps.MapActivity;
@@ -27,6 +28,7 @@ public class Launch extends MapActivity implements View.OnClickListener
     private MapView mapView;
     private MapController mapController;
     private Location knownLocation;
+    private MyLocationOverlay overlay;
 
     /**
      * Called when the activity is first created.
@@ -63,10 +65,18 @@ public class Launch extends MapActivity implements View.OnClickListener
      */
     private void initMyLocation()
     {
-        final MyLocationOverlay overlay = new MyLocationOverlay(this, mapView);
+
+        overlay = new MyLocationOverlay(this, mapView);
         overlay.enableMyLocation();
         overlay.runOnFirstFix(new MyRunnable(overlay));
         mapView.getOverlays().add(overlay);
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        overlay.enableMyLocation();
     }
 
     public void onClick(View view)
@@ -86,7 +96,7 @@ public class Launch extends MapActivity implements View.OnClickListener
     private void handleNewLocation(View view)
     {
         Intent i = new Intent(view.getContext(), EnterAddress.class);
-         i.putExtra(C.DISPLAY_MESSAGE, false);
+        i.putExtra(C.DISPLAY_MESSAGE, false);
         startActivity(i);
     }
 
@@ -94,45 +104,43 @@ public class Launch extends MapActivity implements View.OnClickListener
     {
         if (getLastLocation())
         {
-
+            Log.i("KnowLocation", "true");
             final double latitude = knownLocation.getLatitude();
             final double longitude = knownLocation.getLongitude();
-            Intent i = new Intent(view.getContext(), POIList.class);
+            Intent i = new Intent(view.getContext(), SelectPOI.class);
             i.putExtra(C.LONGITUDE, longitude);
             i.putExtra(C.LATITUDE, latitude);
             i.putExtra(C.STATUS, C.CURRENT);
+            Log.i("", "Lat " + latitude);
+            Log.i("", "Long " + longitude);
             startActivity(i);
         }
         else
         {
+            Log.i("KnowLocation", "false");
             Intent i = new Intent(view.getContext(), EnterAddress.class);
             i.putExtra(C.DISPLAY_MESSAGE, true);
             startActivity(i);
         }
     }
 
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        overlay.disableMyLocation();//To change body of overridden methods use File | Settings | File Templates.
+    }
+
     private Boolean getLastLocation()
     {
         Boolean result = false;
 
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-        criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        criteria.setAltitudeRequired(false);
-        criteria.setBearingRequired(false);
-        criteria.setCostAllowed(true);
-        criteria.setPowerRequirement(Criteria.POWER_LOW);
+        knownLocation = overlay.getLastFix();
 
-        String bestProvider = locationManager.getBestProvider(criteria, true);
-        if (bestProvider != null)
+        if (knownLocation != null)
         {
-            knownLocation = locationManager.getLastKnownLocation(bestProvider);
-            if (knownLocation != null)
-            {
-                result = true;
-            }
+            result = true;
         }
-
 
         return result;
     }
