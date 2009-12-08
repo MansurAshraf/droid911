@@ -4,6 +4,10 @@
    android:layout_width="fill_parent"
    android:padding="30dip"
    android:orientation="horizontal">
+    <ScrollView
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent">
+
    <LinearLayout
       android:orientation="vertical"
       android:layout_height="wrap_content"
@@ -25,7 +29,7 @@
          android:id="@+id/hospital"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
-         android:text="Hospitals" />
+         android:text="Hospital" />
       <Button
          android:id="@+id/towtruck"
          android:layout_width="fill_parent"
@@ -48,4 +52,5 @@
          android:text="Bank" />
 
    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
