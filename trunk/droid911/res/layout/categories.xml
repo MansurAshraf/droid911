@@ -1,0 +1,51 @@
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+   android:layout_width="fill_parent"
+   android:padding="30dip"
+   android:orientation="horizontal">
+   <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_gravity="center">
+      <TextView
+         android:text="Categories"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginBottom="25dip"
+         android:textSize="24.5sp" />
+      <Button
+         android:id="@+id/police"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Police Station" />
+      <Button
+         android:id="@+id/hospital"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Hospitals" />
+      <Button
+         android:id="@+id/towtruck"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Tow Truck" />
+      <Button
+         android:id="@+id/autorepair"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Auto Repair Workshop" />
+        <Button
+         android:id="@+id/gaststation"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Gas Station" />
+       <Button
+         android:id="@+id/bank"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Bank" />
+
+   </LinearLayout>
+</LinearLayout>
