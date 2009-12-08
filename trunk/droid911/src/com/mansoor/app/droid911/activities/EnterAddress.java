@@ -33,6 +33,7 @@ public class EnterAddress extends Activity implements View.OnClickListener
         stateField = (EditText) findViewById(R.id.state);
         countryField = (EditText) findViewById(R.id.country);
         Button submit = (Button) findViewById(R.id.submit);
+        
         submit.setOnClickListener(this);
         displayMessage();
     }

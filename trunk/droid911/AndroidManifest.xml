@@ -12,6 +12,7 @@
         <activity android:name=".POIList" android:label="Point of Interests"/>
         <activity android:name=".SelectPOI" android:label="Categories"/>
         <activity android:name=".EnterAddress" android:label="Enter Address"/>
+         <meta-data android:value="a14b1eb75d567ff" android:name="ADMOB_PUBLISHER_ID"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
