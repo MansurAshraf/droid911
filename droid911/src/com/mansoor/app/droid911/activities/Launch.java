@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import com.flurry.android.FlurryAgent;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
@@ -70,6 +71,21 @@ public class Launch extends MapActivity implements View.OnClickListener
         overlay.enableMyLocation();
         overlay.runOnFirstFix(new MyRunnable(overlay));
         mapView.getOverlays().add(overlay);
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();    //To change body of overridden methods use File | Settings | File Templates.
+        FlurryAgent.onStartSession(this, "TJ6UIA6ERAVME5LPC5UD");
+
+    }
+
+    public void onStop()
+    {
+        super.onStop();
+        FlurryAgent.onEndSession(this);
+        // your code
     }
 
     @Override

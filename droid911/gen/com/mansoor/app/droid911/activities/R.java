@@ -9,6 +9,56 @@ package com.mansoor.app.droid911.activities;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int backgroundColor=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isGoneWithoutAd=0x7f010005;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int keywords=0x7f010003;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int refreshInterval=0x7f010004;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int testing=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColor=0x7f010002;
     }
     public static final class drawable {
         public static final int call=0x7f020000;
@@ -16,35 +66,37 @@ public final class R {
         public static final int icon=0x7f020002;
     }
     public static final class id {
-        public static final int autorepair=0x7f060008;
-        public static final int bank=0x7f06000a;
-        public static final int call=0x7f060013;
-        public static final int call_menu=0x7f060014;
+        public static final int ad=0x7f060005;
+        public static final int autorepair=0x7f060009;
+        public static final int bank=0x7f06000b;
+        public static final int call=0x7f060014;
+        public static final int call_menu=0x7f060015;
         public static final int city=0x7f060000;
         public static final int country=0x7f060002;
-        public static final int currentlocation=0x7f06000c;
-        public static final int direction=0x7f060011;
-        public static final int directon_menu=0x7f060015;
-        public static final int empty=0x7f06000e;
-        public static final int gaststation=0x7f060009;
-        public static final int hospital=0x7f060006;
-        public static final int map_view=0x7f06000b;
+        public static final int currentlocation=0x7f06000d;
+        public static final int direction=0x7f060012;
+        public static final int directon_menu=0x7f060016;
+        public static final int empty=0x7f06000f;
+        public static final int gaststation=0x7f06000a;
+        public static final int hospital=0x7f060007;
+        public static final int map_view=0x7f06000c;
         public static final int message=0x7f060004;
-        public static final int name=0x7f06000f;
-        public static final int newlocation=0x7f06000d;
-        public static final int phone=0x7f060012;
-        public static final int police=0x7f060005;
+        public static final int name=0x7f060010;
+        public static final int newlocation=0x7f06000e;
+        public static final int phone=0x7f060013;
+        public static final int police=0x7f060006;
         public static final int state=0x7f060001;
-        public static final int street=0x7f060010;
+        public static final int street=0x7f060011;
         public static final int submit=0x7f060003;
-        public static final int towtruck=0x7f060007;
+        public static final int towtruck=0x7f060008;
     }
     public static final class layout {
         public static final int address=0x7f030000;
-        public static final int categories=0x7f030001;
-        public static final int launch=0x7f030002;
-        public static final int list=0x7f030003;
-        public static final int row=0x7f030004;
+        public static final int admob=0x7f030001;
+        public static final int categories=0x7f030002;
+        public static final int launch=0x7f030003;
+        public static final int list=0x7f030004;
+        public static final int row=0x7f030005;
     }
     public static final class menu {
         public static final int menu=0x7f050000;
@@ -53,4 +105,116 @@ public final class R {
         public static final int app_name=0x7f040001;
         public static final int hello=0x7f040000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a com_admob_android_ads_AdView.
+           <p>Includes the following attributes:</p>
+           <table border="2" width="85%" align="center" frame="hsides" rules="all" cellpadding="5">
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute<th>Summary</tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_backgroundColor com.mansoor.app.droid911.activities:backgroundColor}</code><td></tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_isGoneWithoutAd com.mansoor.app.droid911.activities:isGoneWithoutAd}</code><td></tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_keywords com.mansoor.app.droid911.activities:keywords}</code><td></tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_refreshInterval com.mansoor.app.droid911.activities:refreshInterval}</code><td></tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_testing com.mansoor.app.droid911.activities:testing}</code><td></tr>
+           <tr><th><code>{@link #com_admob_android_ads_AdView_textColor com.mansoor.app.droid911.activities:textColor}</code><td></tr>
+           </table>
+           @see #com_admob_android_ads_AdView_backgroundColor
+           @see #com_admob_android_ads_AdView_isGoneWithoutAd
+           @see #com_admob_android_ads_AdView_keywords
+           @see #com_admob_android_ads_AdView_refreshInterval
+           @see #com_admob_android_ads_AdView_testing
+           @see #com_admob_android_ads_AdView_textColor
+         */
+        public static final int[] com_admob_android_ads_AdView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#backgroundColor}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:backgroundColor
+        */
+        public static final int com_admob_android_ads_AdView_backgroundColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#isGoneWithoutAd}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:isGoneWithoutAd
+        */
+        public static final int com_admob_android_ads_AdView_isGoneWithoutAd = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#keywords}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:keywords
+        */
+        public static final int com_admob_android_ads_AdView_keywords = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#refreshInterval}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:refreshInterval
+        */
+        public static final int com_admob_android_ads_AdView_refreshInterval = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#testing}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:testing
+        */
+        public static final int com_admob_android_ads_AdView_testing = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.mansoor.app.droid911.activities.R.attr#textColor}
+          attribute's value can be found in the {@link #com_admob_android_ads_AdView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textColor
+        */
+        public static final int com_admob_android_ads_AdView_textColor = 2;
+    };
 }

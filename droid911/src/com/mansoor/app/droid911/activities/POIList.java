@@ -60,6 +60,7 @@ public class POIList extends ListActivity
             setListAdapter(poiAdapter);
         }
     };
+    private View adView;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -75,9 +76,9 @@ public class POIList extends ListActivity
         listView.setOnCreateContextMenuListener(this);
         emptyView = (TextView) findViewById(R.id.empty);
         listView.setEmptyView(emptyView);
-       // LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-         getIntentValues();
-        //   adView = vi.inflate(R.layout.admob, null);
+        LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        adView = vi.inflate(R.layout.admob, null);
+        getIntentValues();
         getData();
     }
 
@@ -189,11 +190,11 @@ public class POIList extends ListActivity
                     POIs = poiService.getPoI(query, latitude, longitude);
                 }
 
-                /* if (resturants != null)
+                if (POIs != null)
                 {
 
                     getListView().addFooterView(adView);
-                }*/
+                }
                 handler.sendEmptyMessage(0);
             }
             catch (Exception e)
