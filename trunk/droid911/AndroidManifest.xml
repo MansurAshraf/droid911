@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mansoor.app.droid911.activities">
+          package="com.mansoor.app.droid911.activities" android:versionCode="1"
+          android:versionName="1.0">
+    
+    <uses-sdk android:minSdkVersion="1"/>
     <application android:icon="@drawable/icon" android:label="Droid911">
          <uses-library android:name="com.google.android.maps" />
         <activity android:name=".Launch">
