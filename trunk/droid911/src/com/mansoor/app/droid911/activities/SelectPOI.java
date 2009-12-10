@@ -41,6 +41,9 @@ public class SelectPOI extends Activity implements View.OnClickListener
         Button towtruck = (Button) findViewById(R.id.towtruck);
         Button bank = (Button) findViewById(R.id.bank);
         Button gastation = (Button) findViewById(R.id.gaststation);
+        Button fire = (Button) findViewById(R.id.fire);
+        Button atm = (Button) findViewById(R.id.atm);
+
 
         police.setOnClickListener(this);
         hospital.setOnClickListener(this);
@@ -48,6 +51,8 @@ public class SelectPOI extends Activity implements View.OnClickListener
         autorepair.setOnClickListener(this);
         bank.setOnClickListener(this);
         gastation.setOnClickListener(this);
+        fire.setOnClickListener(this);
+        atm.setOnClickListener(this);
     }
 
     private void getIntentValues()
@@ -68,7 +73,7 @@ public class SelectPOI extends Activity implements View.OnClickListener
 
     public void onClick(View view)
     {
-        Intent i = new Intent(view.getContext(),POIList.class);
+        Intent i = new Intent(view.getContext(), POIList.class);
         i.putExtra(C.STATUS, status);
         i.putExtra(C.CITY, city);
         i.putExtra(C.STATE, state);
@@ -96,6 +101,12 @@ public class SelectPOI extends Activity implements View.OnClickListener
                 break;
             case R.id.gaststation:
                 i.putExtra(C.QUERY, C.GAS_STATION);
+                break;
+            case R.id.fire:
+                i.putExtra(C.QUERY, C.FIRE_STATION);
+                break;
+            case R.id.atm:
+                i.putExtra(C.QUERY, C.ATM);
                 break;
         }
 

@@ -25,6 +25,11 @@
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="Police Station" />
+        <Button
+         android:id="@+id/fire"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Fire Station" />
       <Button
          android:id="@+id/hospital"
          android:layout_width="fill_parent"
@@ -45,6 +50,11 @@
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="Gas Station" />
+        <Button
+         android:id="@+id/atm"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="ATM" />
        <Button
          android:id="@+id/bank"
          android:layout_width="fill_parent"
