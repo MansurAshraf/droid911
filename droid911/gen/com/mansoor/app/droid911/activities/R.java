@@ -67,28 +67,30 @@ containing a value of this type.
     }
     public static final class id {
         public static final int ad=0x7f060005;
-        public static final int autorepair=0x7f060009;
-        public static final int bank=0x7f06000b;
-        public static final int call=0x7f060014;
-        public static final int call_menu=0x7f060015;
+        public static final int atm=0x7f06000c;
+        public static final int autorepair=0x7f06000a;
+        public static final int bank=0x7f06000d;
+        public static final int call=0x7f060016;
+        public static final int call_menu=0x7f060017;
         public static final int city=0x7f060000;
         public static final int country=0x7f060002;
-        public static final int currentlocation=0x7f06000d;
-        public static final int direction=0x7f060012;
-        public static final int directon_menu=0x7f060016;
-        public static final int empty=0x7f06000f;
-        public static final int gaststation=0x7f06000a;
-        public static final int hospital=0x7f060007;
-        public static final int map_view=0x7f06000c;
+        public static final int currentlocation=0x7f06000f;
+        public static final int direction=0x7f060014;
+        public static final int directon_menu=0x7f060018;
+        public static final int empty=0x7f060011;
+        public static final int fire=0x7f060007;
+        public static final int gaststation=0x7f06000b;
+        public static final int hospital=0x7f060008;
+        public static final int map_view=0x7f06000e;
         public static final int message=0x7f060004;
-        public static final int name=0x7f060010;
-        public static final int newlocation=0x7f06000e;
-        public static final int phone=0x7f060013;
+        public static final int name=0x7f060012;
+        public static final int newlocation=0x7f060010;
+        public static final int phone=0x7f060015;
         public static final int police=0x7f060006;
         public static final int state=0x7f060001;
-        public static final int street=0x7f060011;
+        public static final int street=0x7f060013;
         public static final int submit=0x7f060003;
-        public static final int towtruck=0x7f060008;
+        public static final int towtruck=0x7f060009;
     }
     public static final class layout {
         public static final int address=0x7f030000;

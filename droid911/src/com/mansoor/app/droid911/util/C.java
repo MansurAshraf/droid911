@@ -30,4 +30,6 @@ public class C
     public static final String GAS_STATION = "gas station";
     public static final String QUERY = "Query";
     public static final String EMPTY_MESSAGE = "Oh snap! Could not find anything";
+    public static final String FIRE_STATION = "Fire Station";
+    public static final String ATM = "ATM";
 }
