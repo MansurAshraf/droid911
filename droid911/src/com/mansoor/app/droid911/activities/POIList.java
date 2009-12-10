@@ -6,6 +6,7 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -170,6 +171,11 @@ public class POIList extends ListActivity
         t.start();
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);    //To change body of overridden methods use File | Settings | File Templates.
+    }
 
     private class ServiceThread extends Thread
     {

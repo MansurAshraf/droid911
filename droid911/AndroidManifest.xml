@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mansoor.app.droid911.activities" android:versionCode="1"
-          android:versionName="1.0">
+          package="com.mansoor.app.droid911.activities" android:versionCode="2"
+          android:versionName="1.1">
     
     <uses-sdk android:minSdkVersion="1"/>
     <application android:icon="@drawable/icon" android:label="Droid911">
@@ -12,7 +12,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".POIList" android:label="Point of Interests"/>
+        <activity android:name=".POIList" android:label="Point of Interests" android:configChanges="keyboardHidden|orientation"/>
         <activity android:name=".SelectPOI" android:label="Categories"/>
         <activity android:name=".EnterAddress" android:label="Enter Address"/>
          <meta-data android:value="a14b1eb75d567ff" android:name="ADMOB_PUBLISHER_ID"/>
